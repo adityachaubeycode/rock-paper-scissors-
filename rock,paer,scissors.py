@@ -3,6 +3,7 @@ print(" this is my own game ")
 
 import random
 
+# made choices for computer and player 
 def get_choices():
     player_choices =input(" enter your choice (rock , paper , scissors : ").lower()
     options = ["rock", "paper", "scissors"]
@@ -10,7 +11,7 @@ def get_choices():
     choices = {"player": player_choices, "computer": computer_choices}
     return choices
 
-
+# functions for checking winner 
 def check_win(player , computer):
     print(f"\nYou chose {player}, computer chose {computer}.")
     if player == computer:
@@ -34,6 +35,7 @@ def check_win(player , computer):
 choices = get_choices()
 check_win(choices["player"], choices["computer"])
 
+# while loop to ask whether the player wants to play 
 def play_game():
    print("welcomr to rock paper scissors !")
 while True:
